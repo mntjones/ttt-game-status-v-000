@@ -14,6 +14,7 @@ def won?(board)
     # looking at each index in the win array
     win.each do |index|
       # checking each index in the win array to see if position is taken (true/false) and saving to array position
+<<<<<<< HEAD
       position << position_taken?(board, index)
     end
     # checking to see if position array holds all TRUE values.
@@ -22,10 +23,18 @@ def won?(board)
       end
       
     if all_true
+=======
+      position = position_taken?(board, index)
+    end
+    # checking to see if position array holds all TRUE values.
+    joy = position.all? do |pos| pos end
+    if joy
+>>>>>>> b6b5ef00fed3242c962d62daae700d2dabe06193
       # checking to see if those positions are the same character
       if board[win[0]] == board[win[1]] && board[win[0]]== board[win[2]]
         return win
       else
+<<<<<<< HEAD
         position = []
       end
       
@@ -78,3 +87,14 @@ def winner (board)
     return board[x_or_o[0]]
   end
 end
+=======
+        return false
+      end
+    else
+      return false
+    end
+  end
+end
+
+won?([" ", " ", " ", " ", " ", " ", " ", " ", " "])
+>>>>>>> b6b5ef00fed3242c962d62daae700d2dabe06193
